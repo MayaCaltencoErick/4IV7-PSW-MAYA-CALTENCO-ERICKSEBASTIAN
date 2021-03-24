@@ -19,52 +19,54 @@ function validar(formulario){
 //Crear opción para solo ingresar letras
 
 
-    var checkOK="QWETYUIOPASDFGHJKLÑZXCVBNM"
-    +"qwretyiuopañslkdfjghzmxncbv";
+var checkOK = "QWERTYUIOPASDFGHJKLÑZXCVBNM"
++ "qwertyuiopasdfghjklñzxcvbnm";
 
-    var checkSTR = formulario.nombre.value;
+var checkStr = formulario.nombre.value;
+
+var allvalid = true;
+
+for(var i = 0; i < checkStr.length; i++){
+    var ch = checkStr.charAt(i);
+    for(var j = 0; j < checkOK.length; j++)
+    if(ch == checkOK.charAt(j))
+        break;
+    if(j == checkOK.length){
+        allvalid = false;
+        break;
+    }
+}
+
+if(!allvalid){
+    alert("Escribe solo letras en el campo nombre");
+    formulario.nombre.focus();
+    return false;
+}
+    //"2"//
+
+    var checkOK = "1234567890";
+
+    var checkStr = formulario.edad.value;
 
     var allvalid = true;
 
-    for(var i=0; i<checkSTR.length; i++){
-        var ch = checkSTR.charAT(i);
-        for(var j=o; j<checkOK.length; j++)
-        if(ch==checkOK.charAT(j))
+    for(var i = 0; i < checkStr.length; i++){
+        var ch = checkStr.charAt(i);
+        for(var j = 0; j < checkOK.length; j++)
+        if(ch == checkOK.charAt(j))
             break;
-        if(j==checkOK.lenght){
-            allvalid=false;
-            break;
-        }
-    }
-        if(!allvalid){
-            alert("Escribe solo letras en el campo nombre");
-            formulario.nombre.focus();  
-            return false;
-        }
- 
-    
-
-    var checkOK="1234567890";
-
-    var checkSTR = formulario.edad.value;
-
-    var allvalid = true;
-
-    for(var i=0; i<checkSTR.length; i++){
-        var ch = checkSTR.charAT(i);
-        for(var j=o; j<checkOK.length; j++)
-        if(ch==checkOK.charAT(j))
-            break;
-        if(j==checkOK.lenght){
-            allvalid=false;
+        if(j == checkOK.length){
+            allvalid = false;
             break;
         }
     }
-        if(!allvalid){
-            alert("Escribe solo números en el campo edad");
-            formulario.edad.focus();  
-            return false;
-        }
+
+    if(!allvalid){
+        alert("Escribe solo numeros en el campo edad");
+        formulario.edad.focus();
+        return false;
+    }
+
 
     
    var txt = formulario.email.value;
