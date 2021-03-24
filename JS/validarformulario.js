@@ -7,9 +7,9 @@ crear función que solo permita que el usuario ponga más de 5 caracteres
 
 function validar(formulario){
     //obtener los valores del formulario
-    if(formulario.Nombre.value.length < 5){
+    if(formulario.nombre.value.length < 5){
         alert("Escribe  más de 5 caracteres en el campo nombre");
-        formulario.Nombre.focus();
+        formulario.nombre.focus();
     return false;
     }
 
@@ -22,7 +22,7 @@ function validar(formulario){
     var checkOK="QWETYUIOPASDFGHJKLÑZXCVBNM"
     +"qwretyiuopañslkdfjghzmxncbv";
 
-    var checkSTR = formulario.Nombre.value;
+    var checkSTR = formulario.nombre.value;
 
     var allvalid = true;
 
@@ -38,7 +38,7 @@ function validar(formulario){
     }
         if(!allvalid){
             alert("Escribe solo letras en el campo nombre");
-            formulario.Nombre.focus();  
+            formulario.nombre.focus();  
             return false;
         }
  
@@ -46,7 +46,7 @@ function validar(formulario){
 
     var checkOK="1234567890";
 
-    var checkSTR = formulario.Edad.value;
+    var checkSTR = formulario.edad.value;
 
     var allvalid = true;
 
@@ -62,12 +62,12 @@ function validar(formulario){
     }
         if(!allvalid){
             alert("Escribe solo números en el campo edad");
-            formulario.Numero.focus();  
+            formulario.edad.focus();  
             return false;
         }
 
     
-   var txt = formulario.Email.value;
+   var txt = formulario.email.value;
 
    var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
 
