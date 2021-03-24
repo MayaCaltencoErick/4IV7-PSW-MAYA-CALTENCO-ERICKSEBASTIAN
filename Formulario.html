@@ -11,7 +11,7 @@
 <body>
     
     <form method="GET" name="formulario"
-    action="Formulario.html" onsubmit="">
+    action="Formulario.html" onsubmit="return validar(this)">
     Nombre:
     <br>
     <input type="text" name="nombre" size="20">
@@ -26,8 +26,8 @@
     <br>
     <input type="submit" value="Enviar Datos" name="enviar">
     <br>
-    <input type="teset" value=""
+    <input type="reset" value="Borrar" name="borrar">
 
-
+    <a href ="Index.html">Regresar a index</a>
 </body>
 </html>
