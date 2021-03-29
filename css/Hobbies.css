@@ -9,6 +9,8 @@
 
 html, body{
     background-color: #000000;
+    background: linear-gradient(to right, red, black);
+    background: -prefix-linear-gradient(left, red, black);
 }
 
 
@@ -16,30 +18,35 @@ html, body{
     float: center;
     align-items: center;
     word-break:break-all;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    background-color: #70A9A1;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    background-color: #FFFF;
+    border: 4px solid rgb(255, 255, 255);
     
 }
 
 nav, section, footer, article, head, aside{
-    border: 2px solid rgb(55, 122, 100);
-    margin:1rem;
     
-    padding: 1rem;
+    margin:0;
+    padding :1rem;
+    padding-top:1rem;
 }
 article, aside{
     width: 40%;
     display: inline-block;
     
-    background-color: #CFD7C7;
-    
     
 }
+section{
+    border-bottom: 2px solid rgb(55, 122, 100);
+}
 
-nav, section, footer{
-    background-color: #da5bb4;
-
+.encabezado{
+    background-color: rgb(76, 89, 211);
+    
+}
+.videojuegos{
+    background-color: rgb(21, 117, 134);
 }
 .titulo{
 text-align:left;
@@ -49,4 +56,11 @@ text-align:left;
     text-justify: inter-word;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    
+}
+.musica{
+    background-color: red;
+}
+.anime{
+    background-color: blueviolet;
 }
