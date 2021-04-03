@@ -1,5 +1,3 @@
-//Vamos a crear una función de validad con una expresión regular la entrada de dats en el campo de texto
-
 function validarn(e){
     var teclado = (document.all)?e.keyCode:e.which;
     if(teclado == 8) return true;
@@ -8,15 +6,15 @@ function validarn(e){
     return patron.test(prueba);
 }
 
-function interes(){
+function comision(){
     var valor = document.formulario.cantidad.value;
     var resultado = parseInt(valor);
-    var interes = resultado*0.02;
-    var total = resultado + interes;
-    document.formulario.sueldoti.value="$"+total;
+    var comision = resultado*0.3;
+    var total = resultado + comision;
+    document.formulario.resultado.value="$"+total;
 }
 
 function borrar(){
     document.formulario.cantidad.value="";
-    document.formulario.sueldoti.value="";
+    document.formulario.resultado.value="";
 }
