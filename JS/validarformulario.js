@@ -69,11 +69,12 @@ if(!allvalid){
 
 
     
-   var txt = formulario.email.value;
+    var txt = formulario.email.value;
 
-   var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
+    //patron
+    var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
 
-   alert("Email "+(b.text(txt)?"":" no ")+" valido");
+    alert("Email " + (b.test(txt)?"":" no ")+" valido");
 
-   return b.test(txt);
+    return b.test(txt);
 }
